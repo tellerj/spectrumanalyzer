@@ -22,5 +22,16 @@ def options():
 
     return jsonify({'image': image_base64})
 
+@app.route('/settings', methods=['GET', 'POST'])
+def settings():
+    if request.method == 'POST':
+        # Submit settings as a POST request to the '/options' page
+
+        #..... do that here....
+
+        return "Settings submitted!"
+    return render_template('settings.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
